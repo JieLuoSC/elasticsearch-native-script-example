@@ -16,7 +16,6 @@ package org.elasticsearch.examples.nativescript.plugin;
 
 import org.elasticsearch.examples.nativescript.script.IsPrimeSearchScript;
 import org.elasticsearch.examples.nativescript.script.LanguageModelScoreScript;
-import org.elasticsearch.examples.nativescript.script.LookupScript;
 import org.elasticsearch.examples.nativescript.script.CosineSimilarityScoreScript;
 import org.elasticsearch.examples.nativescript.script.PhraseScoreScript;
 import org.elasticsearch.examples.nativescript.script.TFIDFScoreScript;
@@ -61,7 +60,6 @@ public class NativeScriptExamplesPlugin extends Plugin {
     public void onModule(ScriptModule module) {
         // Register each script that we defined in this plugin
         module.registerScript("is_prime", IsPrimeSearchScript.Factory.class);
-        module.registerScript("lookup", LookupScript.Factory.class);
         module.registerScript("random", RandomSortScriptFactory.class);
         module.registerScript("popularity", PopularityScoreScriptFactory.class);
         module.registerScript(TFIDFScoreScript.SCRIPT_NAME, TFIDFScoreScript.Factory.class);
